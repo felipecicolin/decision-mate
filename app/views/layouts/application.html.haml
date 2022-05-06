@@ -1,0 +1,26 @@
+!!!
+%html
+  %head
+    %title DecisionTreeRails
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = stylesheet_link_tag "main", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+
+  %body
+    %header
+      %nav.navbar.navbar-expand-lg.navbar-light.bg-light.rounded{"aria-label" => "Twelfth navbar example"}
+        .container-fluid
+          %button.navbar-toggler{"aria-controls" => "navbarsExample10", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarsExample10", "data-bs-toggle" => "collapse", :type => "button"}
+            %span.navbar-toggler-icon
+          #navbarsExample10.collapse.navbar-collapse.justify-content-md-center
+            %ul.navbar-nav
+              %li.nav-item
+                %a.nav-link.active{"aria-current" => "page", :href => "#"} Centered nav only
+              %li.nav-item
+                %a.nav-link{:href => "#"} Link
+              %li.nav-item
+                %a.nav-link.disabled Disabled
+    = yield
