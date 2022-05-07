@@ -5,6 +5,7 @@
     %meta(content = "width=device-width,initial-scale=1" name = "viewport")/
     = csrf_meta_tags
     = csp_meta_tag
+    = favicon_link_tag "app-favicon.ico"
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = stylesheet_link_tag "main", "data-turbo-track": "reload"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
@@ -18,11 +19,14 @@
           #navbarsExample10.collapse.navbar-collapse.justify-content-md-center
             %ul.navbar-nav
               %li.nav-item
-                %a.nav-link.active(aria-current = "page" href = "#") Centered nav only
+                = link_to root_path do
+                  = image_tag "app-logo.svg", class: "navbar-brand"
               %li.nav-item
-                %a.nav-link(href = "#") Link
+                %a.nav-link(href = "#") About
               %li.nav-item
-                %a.nav-link.disabled Disabled
+                %a.nav-link(href = "#") Dataset
+              %li.nav-item
+                %a.nav-link(href = "#") How the project works
 
     = yield
 
@@ -34,12 +38,8 @@
             %use{"xlink:href" => "#bootstrap"}
         %ul.nav.col-md-4.justify-content-end
           %li.nav-item
-            %a.nav-link.px-2(href = "#") Home
-          %li.nav-item
-            %a.nav-link.px-2(href = "#") Features
-          %li.nav-item
-            %a.nav-link.px-2(href = "#") Pricing
-          %li.nav-item
-            %a.nav-link.px-2(href = "#") FAQs
-          %li.nav-item
             %a.nav-link.px-2(href = "#") About
+          %li.nav-item
+            %a.nav-link.px-2(href = "#") Dataset
+          %li.nav-item
+            %a.nav-link.px-2(href = "#") How the project works
