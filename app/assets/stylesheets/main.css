@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  padding-top: 1.5rem;
+  padding-top: 0.7rem;
   background-image: url("header-image.svg"), url("footer-image.svg");
   background-repeat: no-repeat;
   background-position: top right, bottom left;
@@ -21,4 +21,8 @@ nav,
 .navbar {
   font-size: 22px;
   background-color: transparent !important;
+}
+
+.nav-item {
+  margin: 0.7rem;
 }
