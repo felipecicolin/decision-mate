@@ -8,12 +8,14 @@
     = favicon_link_tag "app-favicon.ico"
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
     = stylesheet_link_tag "main", "data-turbo-track": "reload"
+    = stylesheet_link_tag "https://unpkg.com/aos@next/dist/aos.css"
     = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
+    = javascript_include_tag "https://unpkg.com/aos@next/dist/aos.js"
 
-  %body.d-flex.flex-column.min-vh-100.container
+  %body.d-flex.flex-column.min-vh-100
     %header
       %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.rounded
-        .container-fluid
+        .container-fluid(data-aos = "fade-down" data-aos-duration="3000" data-aos-once="true")
           %button.navbar-toggler(aria-controls = "navbarsExample10" aria-expanded = "false" aria-label = "Toggle navigation" data-bs-target = "#navbarsExample10" data-bs-toggle = "collapse" type = "button")
             %span.navbar-toggler-icon
           #navbarsExample10.collapse.navbar-collapse.justify-content-md-center
@@ -30,16 +32,15 @@
 
     = yield
 
-    .container.mt-auto
-      %footer.d-flex.flex-wrap.justify-content-between.align-items-center.py-3.my-4.border-top
-        %p.col-md-4.mb-0 2022 - Centro Universitário Salesiano de São Paulo
-        %a.col-md-4.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-none{:href => "/"}
-          %svg.bi.me-2(height = "32" width = "40")
-            %use{"xlink:href" => "#bootstrap"}
-        %ul.nav.col-md-4.justify-content-end
-          %li.nav-item
-            %a.nav-link.px-2(href = "#") About
-          %li.nav-item
-            %a.nav-link.px-2(href = "#") Dataset
-          %li.nav-item
-            %a.nav-link.px-2(href = "#") How the project works
+    -# .container.mt-auto(data-aos = "fade-down" data-aos-duration="3000" data-aos-once="true")
+    -#   %footer.d-flex.flex-wrap.justify-content-between.align-items-center.py-2.my-4.border-top
+    -#     %p.col-md-4.mb-0 2022 - Decision Tree
+    -#     %a.col-md-4.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-none{:href => "/"}
+    -#       = image_tag "app-logo.svg", class: "mr-2"
+    -#     %ul.nav.col-md-4.justify-content-end
+    -#       %li.nav-item
+    -#         %a.nav-link.px-2(href = "#") About
+    -#       %li.nav-item
+    -#         %a.nav-link.px-2(href = "#") Dataset
+    -#       %li.nav-item
+    -#         %a.nav-link.px-2(href = "#") How the project works
