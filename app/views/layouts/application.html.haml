@@ -1,7 +1,7 @@
 !!!
 %html
   %head
-    %title Decision Tree
+    %title Decision Mate
     %meta(content = "width=device-width,initial-scale=1" name = "viewport")
     = csrf_meta_tags
     = csp_meta_tag
@@ -21,26 +21,13 @@
           #navbarsExample10.collapse.navbar-collapse.justify-content-md-center
             %ul.navbar-nav
               %li.nav-item
-                = link_to root_path do
-                  = image_tag "app-logo.svg", class: "navbar-brand"
+                = link_to image_tag("app-logo.svg"), root_path, class: "navbar-brand", data: {"turbo-frame": :"main_content"}
+              %li.nav-item
+                = link_to "The Decision Mate", decision_mate_index_path, class: "nav-link", data: {"turbo-frame": :"main_content"}
               %li.nav-item
                 %a.nav-link(href = "#") About
-              %li.nav-item
-                %a.nav-link(href = "#") Dataset
               %li.nav-item
                 %a.nav-link(href = "#") How the project works
 
     = yield
 
-    -# .container.mt-auto(data-aos = "fade-down" data-aos-duration="3000" data-aos-once="true")
-    -#   %footer.d-flex.flex-wrap.justify-content-between.align-items-center.py-2.my-4.border-top
-    -#     %p.col-md-4.mb-0 2022 - Decision Tree
-    -#     %a.col-md-4.d-flex.align-items-center.justify-content-center.mb-3.mb-md-0.me-md-auto.link-dark.text-decoration-none{:href => "/"}
-    -#       = image_tag "app-logo.svg", class: "mr-2"
-    -#     %ul.nav.col-md-4.justify-content-end
-    -#       %li.nav-item
-    -#         %a.nav-link.px-2(href = "#") About
-    -#       %li.nav-item
-    -#         %a.nav-link.px-2(href = "#") Dataset
-    -#       %li.nav-item
-    -#         %a.nav-link.px-2(href = "#") How the project works
