@@ -4,7 +4,7 @@ module DecisionTree
   class ModelTraining < ApplicationService
     def initialize(attributes, training)
       super()
-      @decision_tree = DecisionTree::ID3Tree.new(attributes, training, 1, :discrete)
+      @decision_tree = DecisionTree::ID3Tree.new(attributes, training, product, :discrete)
     end
 
     def call
