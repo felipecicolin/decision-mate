@@ -17,6 +17,10 @@ body {
   background-color: black;
 }
 
+input {
+  color: black !important;
+}
+
 nav,
 .navbar {
   font-size: 22px;
@@ -30,7 +34,6 @@ nav,
 .btn-primary {
   background-color: #ff0050;
   border-color: #6d0d11;
-  
 }
 
 .btn-primary:hover {
