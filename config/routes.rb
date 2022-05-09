@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get "decision_mate/index"
+  get "products/index"
+  get "options/index"
   root "home#index"
 end
