@@ -17,7 +17,9 @@ body {
   background-color: black;
 }
 
-input, select, option {
+input,
+select,
+option {
   color: black !important;
 }
 
@@ -69,4 +71,8 @@ nav,
   color: #fff;
   background-color: #ff0050;
   border-color: #6d0d11;
+}
+
+.right {
+  float: right !important;
 }
