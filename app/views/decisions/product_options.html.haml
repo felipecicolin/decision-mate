@@ -4,7 +4,7 @@
       .col-lg-6(data-aos = "zoom-in" data-aos-duration="1500" data-aos-once="true")
         = image_tag "presentation-image.svg", class: " d-block mx-lg-auto img-fluid"
       .col-lg-6.red-background(data-aos = "zoom-in" data-aos-duration="1500" data-aos-once="true")
-        %h1.display-5.fw-bold.lh-1.mb-3 Choose the product you would like to check:
+        %h1.display-5.fw-bold.lh-1.mb-3 Choose the kind of product you would like to check:
         %select.form-select.form-select-lg.mb-3
           %option(selected = "selected") Select the product:
           %option(value = "1") Shoes
@@ -12,4 +12,13 @@
           %option(value = "3") Video-game
           %option(value = "4") Mobile Phone
           %option(value = "5") Watch
-        %button.btn.btn-primary(type = "submit") Next step
+          %option(value = "6") Clothes
+          %option(value = "7") Home Appliances
+          %option(value = "8") Auto Parts
+          %option(value = "9") Books
+          %option(value = "10") Beauty Products
+          %option(value = "11") Toys
+        = link_to "Next step", decisions_costumer_attributes_path, class: "btn btn-primary", method:"POST", data: {"turbo-frame": :"main_content"}
+        .right
+          = link_to "Go back", root_path, class: "btn btn-primary", data: {"turbo-frame": :"main_content"}
+
