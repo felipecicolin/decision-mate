@@ -3,71 +3,30 @@
     .row.flex-lg-row-reverse.align-items-center.g-4.py-4
       .col-lg-6(data-aos = "zoom-in" data-aos-duration="1500" data-aos-once="true")
         = image_tag "presentation-image.svg", class: " d-block mx-lg-auto img-fluid"
-      .col-lg-6.red-background(data-aos = "zoom-in" data-aos-duration="1500" data-aos-once="true")
+      .col-lg-6(data-aos = "zoom-in" data-aos-duration="1500" data-aos-once="true")
         %h1.display-5.fw-bold.lh-1.mb-3 Choose the kind of product you would like to check:
-        %select.form-select.form-select-lg.mb-3
-          %option(selected = "selected") Select the option:
-          %option(value = "1") One
-          %option(value = "2") Two
-          %option(value = "3") Three
-          %option(value = "4") Four
-          %option(value = "5") Five
+        %form
+          %select.form-select.form-select-md.mb-3
+            %option(selected = "selected") Age:
+            %option(value = "1-10") 1 - 10
+            %option(value = "11-20") 11 - 20
+            %option(value = "21-30") 21 - 30
+            %option(value = "31-40") 31 - 40
+            %option(value = "41-50") 41 - 50
+            %option(value = "> 50") 50+
 
-          %select.form-select.form-select-lg.mb-3
-          %option(selected = "selected") Select the option:
-          %option(value = "1") One
-          %option(value = "2") Two
-          %option(value = "3") Three
-          %option(value = "4") Four
-          %option(value = "5") Five
+          %select.form-select.form-select-md.mb-3
+            %option(selected = "selected") Gender:
+            %option(value = "man") Man
+            %option(value = "woman") Woman
+            %option(value = "other") Other
 
-          %select.form-select.form-select-lg.mb-3
-          %option(selected = "selected") Select the option:
-          %option(value = "1") One
-          %option(value = "2") Two
-          %option(value = "3") Three
-          %option(value = "4") Four
-          %option(value = "5") Five
+          %select.form-select.form-select-md.mb-3
+            %option(selected = "selected") Educational Level:
+            %option(value = "man") Man
+            %option(value = "woman") Woman
+            %option(value = "other") Other
 
-          %select.form-select.form-select-lg.mb-3
-          %option(selected = "selected") Select the option:
-          %option(value = "1") One
-          %option(value = "2") Two
-          %option(value = "3") Three
-          %option(value = "4") Four
-          %option(value = "5") Five
-
-          %select.form-select.form-select-lg.mb-3
-          %option(selected = "selected") Select the option:
-          %option(value = "1") One
-          %option(value = "2") Two
-          %option(value = "3") Three
-          %option(value = "4") Four
-          %option(value = "5") Five
-
-          %select.form-select.form-select-lg.mb-3
-          %option(selected = "selected") Select the option:
-          %option(value = "1") One
-          %option(value = "2") Two
-          %option(value = "3") Three
-          %option(value = "4") Four
-          %option(value = "5") Five
-
-          %select.form-select.form-select-lg.mb-3
-          %option(selected = "selected") Select the option:
-          %option(value = "1") One
-          %option(value = "2") Two
-          %option(value = "3") Three
-          %option(value = "4") Four
-          %option(value = "5") Five
-
-          %select.form-select.form-select-lg.mb-3
-          %option(selected = "selected") Select the option:
-          %option(value = "1") One
-          %option(value = "2") Two
-          %option(value = "3") Three
-          %option(value = "4") Four
-          %option(value = "5") Five
         = link_to "Next step", decisions_costumer_attributes_path, class: "btn btn-primary", method:"POST", data: {"turbo-frame": :"main_content"}
         .right
           = link_to "Go back", decisions_product_options_path, class: "btn btn-primary", data: {"turbo-frame": :"main_content"}
