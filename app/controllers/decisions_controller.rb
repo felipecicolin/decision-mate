@@ -1,7 +1,7 @@
-class DecisionsController < ApplicationController
-  def costumer_attributes
-  end
+# frozen_string_literal: true
 
-  def product_options
-  end
+class DecisionsController < ApplicationController
+  def costumer_attributes; end
+
+  def product_options; end
 end
