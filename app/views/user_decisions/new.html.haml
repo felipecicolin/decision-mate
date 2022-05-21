@@ -1,5 +1,10 @@
-%h1 New user_decision
+.container.col-xxl-8.px-4.py-4
+  .row.flex-lg-row-reverse.align-items-center.g-4.py-4
+    .col-lg-6(data-aos = "zoom-in" data-aos-duration="1500" data-aos-once="true")
+      = image_tag "presentation-image.svg", class: " d-block mx-lg-auto img-fluid"
+    .col-lg-6(data-aos = "zoom-in" data-aos-duration="1500" data-aos-once="true")
+      %h1.display-5.fw-bold.lh-1.mb-3 Choose the costumer attributes and the product you would like to check:
 
-= render 'form'
+      = render "form"
 
-= link_to 'Back', user_decisions_path
+-# = link_to 'Back', user_decisions_path
