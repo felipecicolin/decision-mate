@@ -7,11 +7,11 @@
           %li= message
 
   .field
-    = f.label :gender
-    = f.text_field :gender
+    = f.select :gender, [["Male", "male"], ["Female", "female"], ["Other", "other"]],
+                        { include_blank: "Gender:" }, { class: "form-select form-select-md mb-3" }
   .field
-    = f.label :age
-    = f.number_field :age
+    = f.select :age, [["> 1 and < 30 ", "male"], ["Female", "female"], ["Other", "other"]],
+                        { include_blank: "Age:" }, { class: "form-select form-select-md mb-3" }
   .field
     = f.label :educational_level
     = f.text_field :educational_level
