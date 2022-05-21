@@ -1,0 +1,2 @@
+class UserDecision < ApplicationRecord
+end

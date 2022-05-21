@@ -1,0 +1,28 @@
+= form_for @user_decision do |f|
+  - if @user_decision.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@user_decision.errors.count, "error")} prohibited this user_decision from being saved:"
+      %ul
+        - @user_decision.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :gender
+    = f.text_field :gender
+  .field
+    = f.label :age
+    = f.number_field :age
+  .field
+    = f.label :educational_level
+    = f.text_field :educational_level
+  .field
+    = f.label :martial_status
+    = f.text_field :martial_status
+  .field
+    = f.label :professional_area
+    = f.text_field :professional_area
+  .field
+    = f.label :family_size
+    = f.number_field :family_size
+  .actions
+    = f.submit 'Save'

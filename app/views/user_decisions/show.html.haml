@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Gender:
+  = @user_decision.gender
+%p
+  %b Age:
+  = @user_decision.age
+%p
+  %b Educational level:
+  = @user_decision.educational_level
+%p
+  %b Martial status:
+  = @user_decision.martial_status
+%p
+  %b Professional area:
+  = @user_decision.professional_area
+%p
+  %b Family size:
+  = @user_decision.family_size
+
+= link_to 'Edit', edit_user_decision_path(@user_decision)
+\|
+= link_to 'Back', user_decisions_path
