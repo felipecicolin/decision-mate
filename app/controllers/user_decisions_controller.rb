@@ -1,14 +1,15 @@
-class UserDecisionsController < ApplicationController
-  before_action :set_user_decision, only: %i[ show edit update destroy ]
+# frozen_string_literal: true
 
-  # GET /user_decisions or /user_decisions.json
+class UserDecisionsController < ApplicationController
+  before_action :set_user_decision, only: %i[show edit update destroy]
+
+  # GET /user_decisions
   def index
     @user_decisions = UserDecision.all
   end
 
-  # GET /user_decisions/1 or /user_decisions/1.json
-  def show
-  end
+  # GET /user_decisions/1
+  def show; end
 
   # GET /user_decisions/new
   def new
@@ -16,8 +17,7 @@ class UserDecisionsController < ApplicationController
   end
 
   # GET /user_decisions/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /user_decisions or /user_decisions.json
   def create
@@ -26,23 +26,21 @@ class UserDecisionsController < ApplicationController
     respond_to do |format|
       if @user_decision.save
         format.html { redirect_to user_decision_url(@user_decision), notice: "User decision was successfully created." }
-        format.json { render :show, status: :created, location: @user_decision }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user_decision.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PATCH/PUT /user_decisions/1 or /user_decisions/1.json
+  # PATCH/PUT /user_decisions/1
   def update
     respond_to do |format|
       if @user_decision.update(user_decision_params)
         format.html { redirect_to user_decision_url(@user_decision), notice: "User decision was successfully updated." }
-        format.json { render :show, status: :ok, location: @user_decision }
+
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @user_decision.errors, status: :unprocessable_entity }
+
       end
     end
   end
@@ -58,13 +56,15 @@ class UserDecisionsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user_decision
-      @user_decision = UserDecision.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def user_decision_params
-      params.require(:user_decision).permit(:gender, :age, :educational_level, :martial_status, :professional_area, :family_size)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_user_decision
+    @user_decision = UserDecision.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def user_decision_params
+    params.require(:user_decision).permit(:gender, :age, :educational_level, :martial_status, :professional_area,
+                                          :family_size)
+  end
 end
