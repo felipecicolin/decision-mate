@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_21_143744) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_22_125458) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "user_decisions", force: :cascade do |t|
     t.string "gender"
-    t.integer "age"
+    t.string "age"
     t.string "educational_level"
     t.string "martial_status"
     t.string "professional_area"
