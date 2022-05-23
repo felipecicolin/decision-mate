@@ -1,28 +1,35 @@
 = form_for @user_decision do |f|
   - if @user_decision.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@user_decision.errors.count, "error")} prohibited this user_decision from being saved:"
+      %h2= "#{pluralize(@user_decision.errors.count, "error")} prohibited this decision to be made:"
       %ul
         - @user_decision.errors.full_messages.each do |message|
           %li= message
 
   .field
-    = f.select :gender, [["Male", "male"], ["Female", "female"], ["Other", "other"]],
-                        { include_blank: "Gender:" }, { class: "form-select form-select-md mb-3" }
+    = f.select :gender, [["Male", "Male"], ["Female", "Female"], ["Other", "Other"]],
+                        { include_blank: "Gender:" }, { class: "form-select form-select-md mb-3", required: "true" }
   .field
-    = f.select :age, [["> 1 and < 30 ", "male"], ["Female", "female"], ["Other", "other"]],
-                        { include_blank: "Age:" }, { class: "form-select form-select-md mb-3" }
+    = f.select :age, [["Baby", "Baby"], ["Kid", "Kid"], ["Teen", "Teen"], ["Young Adult", "Young Adult"],
+                      ["Adult", "Adult"], ["Elder", "Elder"]],
+                     { include_blank: "Age:" }, { class: "form-select form-select-md mb-3", required: "true" }
   .field
-    = f.label :educational_level
-    = f.text_field :educational_level
+    = f.select :educational_level, [["Basic", "Basic"], ["Median", "Median"], ["Advanced", "Advanced"],
+                                    ["Very Advanced", "Very Advanced"]],
+                                   { include_blank: "Educational Level:" }, { class: "form-select form-select-md mb-3", required: "true" }
   .field
-    = f.label :martial_status
-    = f.text_field :martial_status
+    = f.select :martial_status, [["Single", "Single"], ["Married", "Married"], ["Engaged", "Engaged"],
+                                ["Divorced", "Divorced"], ["Other", "Other"]],
+                                { include_blank: "Martial Status: " }, { class: "form-select form-select-md mb-3", required: "true" }
   .field
-    = f.label :professional_area
-    = f.text_field :professional_area
+    = f.select :professional_area, [["Architecture and engineering", "Architecture and engineering"], ["Arts, culture and entertainment", "Arts, culture and entertainment"],
+                                    ["Business, management and administration", "Business, management and administration"],
+                                    ["Communications", "Communications"],
+                                    ["Community and social services", "Community and social services"], ["Education", "Education"],
+                                    ["Science and technology", "Science and technology"], ["Other", "Other"]],
+                                   { include_blank: "Professional Area: " }, { class: "form-select form-select-md mb-3", required: "true" }
   .field
-    = f.label :family_size
-    = f.number_field :family_size
+    = f.select :family_size, [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["Other", "Other"]],
+                             { include_blank: "Family Size: " }, { class: "form-select form-select-md mb-3", required: "true" }
   .actions
-    = f.submit 'Save'
+    = f.submit "Save"
