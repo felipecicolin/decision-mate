@@ -22,11 +22,14 @@ class UserDecisionsController < ApplicationController
   # POST /user_decisions or /user_decisions.json
   def create
     @user_decision = UserDecision.new(user_decision_params)
-    DecisionTree::ModelTraining.call(customer_attributes)
+    @user_decision.decision = DecisionTree::ModelTraining.call(customer_attributes)
 
     respond_to do |format|
       if @user_decision.save
-        format.html { redirect_to user_decision_url(@user_decision), notice: "User decision was successfully created." }
+        format.html do
+          redirect_to user_decisions_path,
+                      notice: "This customer should probably buy products related to: #{@user_decision.decision}."
+        end
       else
         format.html { render :new, status: :unprocessable_entity }
       end
