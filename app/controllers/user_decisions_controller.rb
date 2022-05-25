@@ -22,6 +22,7 @@ class UserDecisionsController < ApplicationController
   # POST /user_decisions or /user_decisions.json
   def create
     @user_decision = UserDecision.new(user_decision_params)
+    DecisionTree::ModelTraining.call(customer_attributes)
 
     respond_to do |format|
       if @user_decision.save
@@ -56,6 +57,11 @@ class UserDecisionsController < ApplicationController
   end
 
   private
+
+  def customer_attributes
+    [user_decision_params[:gender], user_decision_params[:age], user_decision_params[:educational_level].to_s,
+     user_decision_params[:martial_status].to_s, user_decision_params[:professional_area].to_s, user_decision_params[:family_size].to_s]
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_user_decision
