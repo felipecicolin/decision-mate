@@ -29,7 +29,7 @@
                                     ["Science and technology", "Science and technology"], ["Other", "Other"]],
                                    { include_blank: "Professional Area: " }, { class: "form-select form-select-md mb-3", required: "true" }
   .field
-    = f.select :family_size, [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5", "5"], ["Other", "Other"]],
+    = f.select :family_size, [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5+", "> 5"]],
                              { include_blank: "Family Size: " }, { class: "form-select form-select-md mb-3", required: "true" }
   .actions
     = f.submit "Save"
