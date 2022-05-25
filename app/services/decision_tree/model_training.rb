@@ -24,7 +24,7 @@ module DecisionTree
     end
 
     def call
-      tree = DecisionTree::ID3Tree.new(@attributes, @training, "Shoes", :discrete)
+      tree = DecisionTree::ID3Tree.new(@attributes, @training, 1, :discrete)
       tree.train
       prediction = tree.predict(@customer_attributes)
     end
