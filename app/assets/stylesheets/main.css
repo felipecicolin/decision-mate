@@ -76,3 +76,7 @@ nav,
 .right {
   float: right !important;
 }
+
+.center {
+  text-align: center !important;
+}
