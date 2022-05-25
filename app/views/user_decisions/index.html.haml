@@ -1,5 +1,6 @@
 %h1.text-center Last customer predictions
-
+.text-center
+  %p#notice= notice
 %br
 .container
   %table.table.table-dark.table-striped
@@ -11,6 +12,7 @@
         %th(scope = "col") Martial status:
         %th(scope = "col") Family size:
         %th(scope = "col") Professional area:
+        %th(scope = "col") Customer Product Prediction:
 
     %tbody
       - @user_decisions.each do |user_decision|
@@ -21,9 +23,7 @@
           %td= user_decision.martial_status
           %td= user_decision.family_size
           %td= user_decision.professional_area
-          -# %td= link_to 'Show', user_decision
-          -# %td= link_to 'Edit', edit_user_decision_path(user_decision)
-          -# %td= link_to 'Destroy', user_decision, method: :delete, data: { confirm: 'Are you sure?' }
+          %td= user_decision.decision
 
   %br
   .center
