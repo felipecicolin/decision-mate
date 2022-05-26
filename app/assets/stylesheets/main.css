@@ -80,3 +80,11 @@ nav,
 .center {
   text-align: center !important;
 }
+
+.submit-button {
+  color: white !important;
+}
+
+.notice-box {
+  background-color: #ff0050;
+}
