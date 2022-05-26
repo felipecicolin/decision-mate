@@ -1,6 +1,9 @@
-%h1.text-center Last customer predictions
 .text-center
-  %p#notice= notice
+  %br
+  %h2#notice= notice
+  %br
+
+%h4.text-center Last customer predictions
 %br
 .container
   %table.table.table-dark.table-striped
@@ -24,7 +27,6 @@
           %td= user_decision.family_size
           %td= user_decision.professional_area
           %td= user_decision.decision
-
   %br
   .center
     = link_to 'New customer prediction', new_user_decision_path, class: "btn btn-primary btn-lg px-4 me-md-2"
