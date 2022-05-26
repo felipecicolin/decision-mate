@@ -31,5 +31,6 @@
   .field
     = f.select :family_size, [["1", "1"], ["2", "2"], ["3", "3"], ["4", "4"], ["5+", "> 5"]],
                              { include_blank: "Family Size: " }, { class: "form-select form-select-md mb-3", required: "true" }
-  .actions
-    = f.submit "Save"
+  %br
+  .center.text-center
+    = f.submit "Check this customer decision", class: "btn btn-primary submit-button"
