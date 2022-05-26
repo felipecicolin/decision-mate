@@ -28,7 +28,7 @@ class UserDecisionsController < ApplicationController
       if @user_decision.save
         format.html do
           redirect_to user_decisions_path,
-                      notice: "This customer should probably buy products related to: #{@user_decision.decision}."
+                      notice: "This customer should probably buy products related to: #{@user_decision.decision}"
         end
       else
         format.html { render :new, status: :unprocessable_entity }
