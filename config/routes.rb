@@ -2,7 +2,6 @@
 
 Rails.application.routes.draw do
   resources :user_decisions
-  get "decisions/costumer_attributes"
-  get "decisions/product_options"
+  get "about/index"
   root "home#index"
 end
