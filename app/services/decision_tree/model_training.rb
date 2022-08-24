@@ -10,8 +10,10 @@ module DecisionTree
     end
 
     def call
-      trained_model = DecisionTree::ID3Tree.new(@attributes, @training, 1, :discrete)
-      trained_model.predict(@customer_attributes)
+      model = DecisionTree::ID3Tree.new(@attributes, @training, 1, :discrete)
+      model.train
+      prediction = model.predict(@customer_attributes)
+      prediction
     end
   end
 end
