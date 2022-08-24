@@ -13,11 +13,11 @@ As the goal of this project was to focus on the Decision Tree itself, the datase
 # Home Page
 ![1](https://user-images.githubusercontent.com/58073599/186541558-880ccfba-f294-49bc-b6ba-350e4c3bcdd7.png)
 
-# Question about the customer
+# Questions about the customer
 ![4](https://user-images.githubusercontent.com/58073599/186542230-fb616712-4d5e-4b0d-9b2b-be5053f7660b.png)
 
 # Last predictions based on given user infos
 ![2](https://user-images.githubusercontent.com/58073599/186541560-784ee3de-dd5e-488e-b11b-2f47eb9ab6ff.png)
 
-#About Page
+# About Page
 ![3](https://user-images.githubusercontent.com/58073599/186541561-9bfa8778-1e6c-4075-b7d3-3962ca762d53.png)
