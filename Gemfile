@@ -9,16 +9,13 @@ gem "cssbundling-rails"
 gem "decisiontree"
 gem "haml"
 gem "haml-rails"
-gem "jbuilder"
 gem "jsbundling-rails"
-gem "nokogiri"
 gem "pg"
 gem "puma"
 gem "rails"
 gem "rubocop", require: false
 gem "rubocop-performance", require: false
 gem "rubocop-rails", require: false
-gem "rubocop-rspec", require: false
 gem "sprockets-rails"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 

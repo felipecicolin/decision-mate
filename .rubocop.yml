@@ -1,6 +1,5 @@
 require:
   - rubocop-rails
-  - rubocop-rspec
   - rubocop-performance
 
 AllCops:
@@ -21,30 +20,8 @@ Style/StringLiterals:
 Style/Documentation:
   Enabled: false
 
-RSpec/MessageSpies:
-  EnforcedStyle: receive
-
-RSpec/MultipleExpectations:
-  Exclude:
-    - spec/features/**/*.rb
-    - spec/views/**/*.rb
-
-RSpec/ExampleLength:
-  CountAsOne: ['array', 'hash', 'heredoc']
-  Exclude:
-    - spec/features/**/*.rb
-
-RSpec/DescribeClass:
-  Exclude:
-    - spec/views/**/*.rb
-    - spec/features/**/*.rb
-
-RSpec/ImplicitSubject:
-  EnforcedStyle: single_statement_only
-
 Metrics/BlockLength:
   Exclude:
-    - spec/**/*.rb
     - Rakefile
     - Guardfile
     - lib/tasks/**/*.rb
