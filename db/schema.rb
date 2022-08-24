@@ -14,12 +14,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_25_225857) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "decisions", force: :cascade do |t|
-    t.string "decision"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "user_decisions", force: :cascade do |t|
     t.string "gender"
     t.string "age"
