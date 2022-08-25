@@ -10,6 +10,8 @@ The used dataset is fictional, handmade only for this purpose. With a real datas
 
 As the goal of this project was to focus on the Decision Tree itself, the dataset used is not being queried from the datababse, making the development process easier in order to focus in other areas of the application.
 
+You can try it on https://decision-mate-rails.herokuapp.com/
+
 # Home Page
 ![1](https://user-images.githubusercontent.com/58073599/186541558-880ccfba-f294-49bc-b6ba-350e4c3bcdd7.png)
 
