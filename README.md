@@ -2,7 +2,7 @@
 
 This project is a simple implementation of a Decision Tree. 
 
-The main goal of this app is to receive from the user some informations about any customer, and, using a dataset, train a decision tree in order to predict what kind of product a customer with the given caracteristics would buy.
+The main goal of this app is to receive from the user some informations about any customer, and, using a dataset, train a decision tree in order to predict what kind of product a customer with the given characteristics would buy.
 
 A decision tree is not the best approach when we talk about prediciting a customer decision about buying a product, but it was chosen only for study purposes.
 
